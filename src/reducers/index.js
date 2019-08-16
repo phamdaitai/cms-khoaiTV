@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import changeState from './changeState';
 
 const appReducer = combineReducers({

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import 'antd/dist/antd.css';
-import './page-header.less';
+import './path-header.less';
 let routes = [
     {
       path: 'index',
@@ -16,7 +15,7 @@ let routes = [
     },
   ];
 
-class PageHeaders extends Component {
+class PathHeaders extends Component {
 
   getTime=()=>{
     let d = new Date();
@@ -29,16 +28,16 @@ class PageHeaders extends Component {
 
     render() {
         return (
-            <div className="page-header">
-              <div className="page-header-left">
+            <div className="path-header">
+              <div className="path-header-left">
                   {routes[0].breadcrumbName+" / "+routes[1].breadcrumbName+" / "+routes[2].breadcrumbName}
               </div>
-              <div className="page-header-right">
-                {this.getTime()}
+              <div className="path-header-right">
+                {/* {this.getTime()} */}
               </div>
             </div>
         );
     }
 }
 
-export default PageHeaders;
+export default PathHeaders;

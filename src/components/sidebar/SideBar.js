@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import 'antd/dist/antd.css';
 import {Layout, Menu, Icon} from 'antd';
 import {connect} from 'react-redux';
 import './style.less';
+import {Link} from 'react-router-dom';
 const { SubMenu } = Menu;
 const {Sider} = Layout;
 
@@ -15,39 +15,31 @@ class Sidebar extends Component {
             
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
               <div className="logo" />
-              <Menu.Item key="1">
-                <Icon type="user" />
-                <span>Người dùng</span>
-              </Menu.Item>
               <Menu.Item key="2">
                 <Icon type="pie-chart" />
-                <span>Biểu đồ</span>
-              </Menu.Item>
-              <Menu.Item key="3">
-                <Icon type="upload" />
-                <span>Tải lên</span>
+                <span><Link to='/' className="menu-option">Biểu đồ</Link></span>
               </Menu.Item>
               <SubMenu
                   key="sub1"
                   title={
                     <span>
-                      <Icon type="mail" />
+                      <Icon type="usergroup-add" />
                       <span>Quản lý user</span>
                     </span>
                   }
                 >
-                  <Menu.Item key="5">Danh sách</Menu.Item>
+                  <Menu.Item key="5"><Link to='/user/'>Danh sách</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu
                   key="sub2"
                   title={
                     <span>
-                      <Icon type="mail" />
+                      <Icon type="video-camera" />
                       <span>Quản lý phim</span>
                     </span>
                   }
                 >
-                  <Menu.Item key="6">Danh sách</Menu.Item>
+                  <Menu.Item key="6"><Link to='/film/'>Danh sách</Link></Menu.Item>
                   <Menu.Item key="7">Thêm phim</Menu.Item>
                   <Menu.Item key="8">Top phim</Menu.Item>
                 </SubMenu>
@@ -55,7 +47,7 @@ class Sidebar extends Component {
                   key="sub3"
                   title={
                     <span>
-                      <Icon type="mail" />
+                      <Icon type="sliders"/>
                       <span>Quản lý banner</span>
                     </span>
                   }

@@ -1,21 +1,23 @@
 import React,{Component} from 'react';
 import './App.less';
 import {Layout} from 'antd';
-import Sidebar from './components/sidebar/SideBar';
-import Headers from './components/header/Header';
-import Contents from './components/content/Content';
-// const { Header, Sider, Content } = Layout;
+import Sidebar from './components/Sidebar/SideBar';
+import Headers from './components/Header/Header';
+import Contents from './components/Content/Content';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 class App extends Component {
   render(){
     return (
-      <Layout>
-        <Sidebar/>
+      <Router>
         <Layout>
-          <Headers/>
-          <Contents/>
+          <Sidebar/>
+          <Layout>
+            <Headers/>
+            <Contents/>
+          </Layout>
         </Layout>
-      </Layout>
+      </Router>
     );
   }
 }

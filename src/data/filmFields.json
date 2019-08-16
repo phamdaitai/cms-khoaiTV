@@ -1,0 +1,242 @@
+{
+  "filterField": [
+    {
+      "title": "Danh mục",
+      "name": "category",
+      "type": "select",
+      "option": ["Hành động", "Cổ trang", "Tài liệu"]
+    },
+    {
+      "title": "Sắp xếp",
+      "name": "arrange",
+      "type": "select",
+      "option": [0, 1, 2, 3, 4, "rate cao nhất"]
+    },
+    {
+      "title": "quốc gia",
+      "name": "country",
+      "type": "select",
+      "option": ["Việt Nam", "Hoa Kỳ", "Hàn Quốc", "Trung Quốc", "Ấn Độ"]
+    },
+    {
+      "title": "thể loại",
+      "name": "type",
+      "type": "select",
+      "option": ["phim lẻ", "phim bộ"]
+    },
+    {
+      "title": "năm xuất bản",
+      "name": "year",
+      "type": "select",
+      "option": [2000, 2001, 2002, 2003, 2004]
+    }
+  ],
+  "tableTitle": {
+    "stt": "STT",
+    "title": "Tên phim",
+    "image": "Ảnh",
+    "dateReleased": "Ngày phát hành",
+    "country": "Quốc gia",
+    "imdb": "Imdb",
+    "views": "Lượt xem",
+    "action": "Xóa"
+  },
+  "addField": {
+    "type": "add",
+    "title": "Thêm phim mới",
+    "submitName": "Thêm mới",
+    "field": [
+      {
+        "type": "input",
+        "name": "title_vn",
+        "label": "Tiêu đề tiếng Việt",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tiêu đề !"
+      },
+      {
+        "type": "input",
+        "name": "title_en",
+        "label": "Tiêu đề tiếng Anh",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tiêu đề !"
+      },
+      {
+        "type": "inputArray",
+        "name": "supportedResolution",
+        "label": "Các độ phân giải",
+        "typeInput": "checkbox",
+        "disabled": false,
+        "messageNull": "Vui lòng chọn ít nhất 1 mục !",
+        "option": [
+          { "value": "144p", "disabled": false },
+          { "value": "240p", "disabled": false },
+          { "value": "360p", "disabled": false },
+          { "value": "480p", "disabled": false },
+          { "value": "720p", "disabled": false },
+          { "value": "1080p", "disabled": false },
+          { "value": "1440p", "disabled": false },
+          { "value": "2160p", "disabled": false }
+        ]
+      },
+      {
+        "type": "date",
+        "name": "dateReleased",
+        "label": "Ngày phát hành",
+        "disable": false,
+        "messageNull": "Vui lòng chọn ngày phát hành !"
+      },
+      {
+        "type": "inputArray",
+        "name": "category",
+        "label": "Danh mục",
+        "typeInput": "checkbox",
+        "disabled": false,
+        "messageNull": "Vui lòng chọn ít nhất 1 mục !",
+        "option": [
+          { "value": "Phim lẻ", "disabled": false },
+          { "value": "Phim bộ", "disabled": false },
+          { "value": "Phim chiếu rạp", "disabled": false },
+          { "value": "Phim bộ chọn lọc", "disabled": false },
+          { "value": "Phim lẻ chọn lọc", "disabled": false },
+          { "value": "Anime", "disabled": false },
+          { "value": "Phim hoạt hình", "disabled": false },
+          { "value": "TV show", "disabled": false },
+          { "value": "Phim sắp chiếu", "disabled": false }
+        ]
+      },
+      {
+        "type": "input",
+        "name": "country",
+        "label": "Quốc gia",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào quốc gia !"
+      },
+      {
+        "type": "input",
+        "name": "time",
+        "label": "Thời lượng",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào thời lượng phim !"
+      },
+      {
+        "type": "input",
+        "name": "episodeNumber",
+        "label": "Số tập",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào số tập phim !"
+      },
+      {
+        "type": "input",
+        "name": "imdb",
+        "label": "Imdb",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào imdb !"
+      },
+      {
+        "type": "inputArray",
+        "name": "scripts",
+        "label": "Người viết kịch",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào biên kịch viên !"
+      },
+      {
+        "type": "inputArray",
+        "name": "directors",
+        "label": "Đạo diễn",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào đạo diễn !"
+      },
+      {
+        "type": "inputArray",
+        "name": "characters",
+        "label": "Diễn viên",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào diễn viên !"
+      },
+      {
+        "type": "input",
+        "name": "description",
+        "label": " Tóm tắt",
+        "typeInput": "textArea",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tóm tắt !"
+      },
+      {
+        "type": "input",
+        "name": "image",
+        "label": "Link ảnh lớn",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào link ảnh !"
+      },
+      {
+        "type": "input",
+        "name": "thumb",
+        "label": "Link ảnh nhỏ",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào link ảnh !"
+      },
+      {
+        "type": "inputArray",
+        "name": "type",
+        "label": "Thể loại",
+        "typeInput": "checkbox",
+        "disabled": false,
+        "messageNull": "Vui lòng chọn ít nhất 1 mục !",
+        "option": [
+          { "value": "Anime", "disabled": false },
+          { "value": "Bí ẩn", "disabled": false },
+          { "value": "Chiến tranh", "disabled": false },
+          { "value": "Đam mỹ - Bách hợp", "disabled": false },
+          { "value": "Gia đình", "disabled": false },
+          { "value": "Giả tưởng-Thần thoại", "disabled": false },
+          { "value": "Giật gân", "disabled": false },
+          { "value": "Hài", "disabled": false },
+          { "value": "Hành động", "disabled": false },
+          { "value": "Hình sự", "disabled": false },
+          { "value": "Hoạt hình", "disabled": false },
+          { "value": "Khoa học & Tài liệu", "disabled": false },
+          { "value": "Khoa học viễn tưởng", "disabled": false },
+          { "value": "Kiếm hiệp - Cổ trang", "disabled": false },
+          { "value": "Kinh dị", "disabled": false },
+          { "value": "Lễ trao giải", "disabled": false },
+          { "value": "Lịch sử - Tiểu sử", "disabled": false },
+          { "value": "Phiêu lưu", "disabled": false },
+          { "value": "Tâm lý", "disabled": false },
+          { "value": "Thanh xuân - Học đường", "disabled": false },
+          { "value": "Thể thao", "disabled": false },
+          { "value": "Thời trang", "disabled": false },
+          { "value": "Tình cảm - Lãng mạn", "disabled": false },
+          { "value": "Truyền hình thực tế", "disabled": false },
+          { "value": "Viễn tây", "disabled": false }
+        ]
+      },
+      {
+        "type": "inputArray",
+        "name": "tags",
+        "label": "Tags",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tags !"
+      },
+      {
+        "type": "input",
+        "name": "content",
+        "label": " Nội dung phim",
+        "typeInput": "textArea",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào nội dung phim !"
+      }
+    ]
+  }
+}

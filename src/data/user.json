@@ -1,0 +1,222 @@
+[
+  {
+    "_id": 1,
+    "email": "grizmann@gmail.com",
+    "name": "Antoine Griezmann",
+    "accType": 0,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 2,
+    "email": "silva@gmail.com",
+    "name": "David SilVa",
+    "accType": 1,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 3,
+    "email": "bruyne@gmail.com",
+    "name": "Kelvin De Bruyne",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 4,
+    "email": "mbappe@gmail.com",
+    "name": "Mbappe",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": false,
+    "password": "123456789"
+  },
+  {
+    "_id": 5,
+    "email": "reus@gmail.com",
+    "name": "Marco Reus",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 6,
+    "email": "beckham@gmail.com",
+    "name": "David Beckham",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": false,
+    "password": "123456789"
+  },
+  {
+    "_id": 7,
+    "email": "luiz@gmail.com",
+    "name": "David Luiz",
+    "accType": 1,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 8,
+    "email": "lewandowski@gmail.com",
+    "name": "Lewandowski",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 9,
+    "email": "wayner@gmail.com",
+    "name": "Wayner Rooney",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": false,
+    "password": "123456789"
+  },
+  {
+    "_id": 10,
+    "email": "dimaria@gmail.com",
+    "name": "Di Maria",
+    "accType": 1,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 11,
+    "email": "grizmann@gmail.com",
+    "name": "Antoine Griezmann",
+    "accType": 0,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 12,
+    "email": "silva@gmail.com",
+    "name": "David SilVa",
+    "accType": 1,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 13,
+    "email": "bruyne@gmail.com",
+    "name": "Kelvin De Bruyne",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 14,
+    "email": "mbappe@gmail.com",
+    "name": "Mbappe",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": false,
+    "password": "123456789"
+  },
+  {
+    "_id": 15,
+    "email": "reus@gmail.com",
+    "name": "Marco Reus",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 16,
+    "email": "beckham@gmail.com",
+    "name": "David Beckham",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": false,
+    "password": "123456789"
+  },
+  {
+    "_id": 17,
+    "email": "luiz@gmail.com",
+    "name": "David Luiz",
+    "accType": 1,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 18,
+    "email": "lewandowski@gmail.com",
+    "name": "Lewandowski",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 19,
+    "email": "wayner@gmail.com",
+    "name": "Wayner Rooney",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": false,
+    "password": "123456789"
+  },
+  {
+    "_id": 20,
+    "email": "dimaria@gmail.com",
+    "name": "Di Maria",
+    "accType": 1,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 21,
+    "email": "lewandowski@gmail.com",
+    "name": "Lewandowski",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": true,
+    "password": "123456789"
+  },
+  {
+    "_id": 22,
+    "email": "wayner@gmail.com",
+    "name": "Wayner Rooney",
+    "accType": 2,
+    "dateRegistered": 1564390577392,
+    "phone": "0123456789",
+    "activated": false,
+    "password": "123456789"
+  }
+]

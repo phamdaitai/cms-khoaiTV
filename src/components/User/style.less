@@ -1,0 +1,114 @@
+@table-element-horver: #e6f7ff;
+@checkbox-color: #2b9952;
+
+.content-main{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.table-user{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.table-user>thead>tr{
+    background-color: rgba(240, 240, 240, 0.2);
+}
+
+.table-user>thead>tr>th{
+    padding: 20px 0px;
+    border: solid 0.3px rgb(223, 223, 223);
+    border-radius: 4px 4px 0px 0px;
+    text-align: center;
+}
+
+.table-user>tbody>tr>td{
+    padding: 20px 10px;
+    border: solid 0.3px rgb(223, 223, 223);
+}
+
+.td-center{
+    text-align: center;
+}
+
+.table-user>tbody>tr:hover{
+    background-color: @table-element-horver;
+    transition: 400ms ease;
+}
+
+.table-user>tbody>tr:hover .button{
+    background-color: @table-element-horver;
+    transition: 400ms ease;
+}
+
+.action-button{
+    display: flex;
+}
+
+.button{
+    background-color: white;
+    border-width: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button:hover{
+    background-color: #e40c0c;
+    transition: 400ms ease;
+}
+
+.icon-action{
+    background-size: 25px 30px;
+    -webkit-mask-repeat: no-repeat;
+    width: 25px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.edit-account-icon{
+    -webkit-mask-image: url(../../public/icon/account-edit.svg);
+    mask-image: url(../../public/icon/account-edit.svg);
+    background-color: rgb(63, 212, 143);
+}
+
+.delete-icon{
+    -webkit-mask-image: url(../../public/icon/delete.svg);
+    mask-image: url(../../public/icon/delete.svg);
+    background-color: rgb(245, 97, 11);
+}
+
+.account-details-icon{
+    -webkit-mask-image: url(../../public/icon/account-details.svg);
+    mask-image: url(../../public/icon/account-details.svg);
+    background-color: rgb(11, 159, 245);
+}
+
+.icon-state{
+    background-size: 24px 24px;
+    -webkit-mask-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.checkbox-none{
+    -webkit-mask-image: url(../../public/icon/checkbox-none.svg);
+    mask-image: url(../../public/icon/checkbox-none.svg);
+    background-color: @checkbox-color;
+    display: inline-block;
+}
+
+.checkbox-selected{
+    -webkit-mask-image: url(../../public/icon/checkbox-selected.svg);
+    mask-image: url(../../public/icon/checkbox-selected.svg);
+    background-color: @checkbox-color;
+    display: inline-block;
+}
+
+.pagination{
+    padding-top: 20px;
+    float: right;
+}

@@ -1,0 +1,129 @@
+{
+  "filterField": [
+    {
+      "title": "Tên người dùng",
+      "name": "name",
+      "type": "input",
+      "typeInput": "text",
+      "placeholder": "Nhập tìm kiếm..."
+    }
+  ],
+  "tableTitle": {
+    "stt": "STT",
+    "name": "Tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "actType": "Loại tài khoản",
+    "dateRegistered": "Ngày đăng ký",
+    "activated": "Trạng thái",
+    "action": "Xóa"
+  },
+  "addField": {
+    "type": "add",
+    "title": "Tạo tài khoản",
+    "submitName": "Đăng ký",
+    "field": [
+      {
+        "type": "input",
+        "name": "email",
+        "label": "E-mail",
+        "typeInput": "email",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào e-mail !",
+        "messageError": "E-mail không đúng !"
+      },
+      {
+        "type": "input",
+        "name": "name",
+        "label": "Tên tài khoản",
+        "typeInput": "nickName",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào nickname của bạn !"
+      },
+      {
+        "type": "input",
+        "name": "password",
+        "label": "Mật khẩu",
+        "typeInput": "password",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào mật khẩu !"
+      },
+      {
+        "type": "input",
+        "name": "confirm",
+        "label": "Xác nhận mật khẩu",
+        "typeInput": "confirm",
+        "disabled": false,
+        "messageNull": "Vui lòng xác nhận mật khẩu !"
+      },
+      {
+        "type": "input",
+        "name": "phone",
+        "label": "Số điện thoại",
+        "typeInput": "phone",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào số điện thoại !"
+      },
+      {
+        "type": "select",
+        "name": "accType",
+        "label": "Loại tài khoản",
+        "disabled": false,
+        "messageNull": "Vui lòng chọn một danh mục !",
+        "option": [
+          {
+            "value": 0,
+            "disabled": false
+          },
+          {
+            "value": 1,
+            "disabled": false
+          },
+          {
+            "value": 2,
+            "disabled": false
+          }
+        ]
+      }
+    ]
+  },
+  "editField": {
+    "type": "edit",
+    "title": "Chỉnh sửa thông tin cá nhấn",
+    "submitName": "Gửi",
+    "field": [
+      {
+        "type": "input",
+        "name": "name",
+        "label": "Tên tài khoản",
+        "typeInput": "nickName",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào nickname của bạn !"
+      },
+      {
+        "type": "input",
+        "name": "oldPassword",
+        "label": "Mật khẩu cũ",
+        "typeInput": "oldPassword",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào mật khẩu mới !"
+      },
+      {
+        "type": "input",
+        "name": "password",
+        "label": "Mật khẩu mới",
+        "typeInput": "password",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào mật khẩu mới !"
+      },
+      {
+        "type": "input",
+        "name": "confirm",
+        "label": "Xác nhận mật khẩu",
+        "typeInput": "confirm",
+        "disabled": false,
+        "messageNull": "Vui lòng xác nhận mật khẩu mới !"
+      }
+    ]
+  }
+}
