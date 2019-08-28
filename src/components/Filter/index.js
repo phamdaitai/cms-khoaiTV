@@ -14,11 +14,20 @@ class Filter extends Component {
     }
   }
 
-  optionSelect = (option) => {
+  optionSelect = (option, name) => {
     let optionSelect = option.map((value, index) => {
-      return (
-        <Option value={value} key={index}>{value}</Option>
-      )
+      if (name !== 'arrange') {
+        return (
+          <Option value={value} key={index}>{value}</Option>
+        )
+      }
+      else {
+        const sort = ["Mới cập nhật", "Năm xuất bản", "Tên phim",
+          "IMBD", "View nhiều nhất", "Rate cao nhất"];
+        return (
+          <Option value={value} key={index}>{sort[value]}</Option>
+        )
+      }
     });
     return optionSelect;
   }
@@ -60,9 +69,11 @@ class Filter extends Component {
     }
     getDataFilter(dataFilterLower);
     for (let key in dataFilter) {
-      this.setState({
-        [key]: undefined
-      })
+      if (key === 'name') {
+        this.setState({
+          [key]: null
+        })
+      }
     }
   }
 
@@ -78,7 +89,7 @@ class Filter extends Component {
                 defaultValue={value.title}
                 name={value.name}
                 onChange={(checked, name) => this.isChange(checked, value.name)}>
-                {this.optionSelect(value.option)}
+                {this.optionSelect(value.option, value.name)}
               </Select>
             </div>
           );

@@ -21,6 +21,14 @@ class TableDetail extends Component {
         });
     };
 
+    showDrawerEdit = (id) => {
+        console.log(id);
+        this.props.getIdEdit(id);
+        this.setState({
+            addShow: true,
+        });
+    }
+
     onClose = () => {
         this.setState({
             addShow: false,
@@ -64,11 +72,12 @@ class TableDetail extends Component {
                     break;
                 case 'name':
                     dataElementShow.push(<td key={key}>
-                        <a onClick={this.showDrawer}
+                        <a onClick={() => this.showDrawerEdit(value._id)}
                             style={{ textDecoration: "none" }}>{value.name}</a>
                         <Forms
                             field={this.props.editField}
                             getDataForm={(dataEdit) => this.getEdit(dataEdit)}
+                            valueProps={value}
                             addShow={this.state.addShow}
                             onClose={this.onClose}
                             element={value}
@@ -93,14 +102,22 @@ class TableDetail extends Component {
                 case 'image':
                     dataElementShow.push(
                         <td className="td-center" key={key}>
-                            <img src={value.image} alt={value.title.title_vn} style={{ width: 60, height: 30 }} />
+                            <img src={value.image} alt='' style={{ width: 60, height: 30 }} />
                         </td>
                     );
                     break;
                 case 'title':
                     dataElementShow.push(
                         <td key={key}>
-                            <a onClick={this.showEditBlock} style={{ textDecoration: "none" }}>{value.title.title_vn}</a>
+                            <a onClick={this.showDrawer} style={{ textDecoration: "none" }}>{value.title.title_vn}</a>
+                            <Forms
+                                field={this.props.editField}
+                                valueProps={value}
+                                getDataForm={(dataEdit) => this.getEdit(dataEdit)}
+                                addShow={this.state.addShow}
+                                onClose={this.onClose}
+                                element={value}
+                            />
                         </td>
                     );
                     break;
@@ -133,7 +150,7 @@ class TableDetail extends Component {
                     dataElementShow.push(
                         <td key={key} className="td-center">
                             <span className={`${activatedTempClass[activatedTemp]} icon-state`}
-                                onClick={this.changeActivated}></span>
+                                onClick={() => this.props.getChangeActivated(value._id)}></span>
                         </td>)
                     break;
                 case 'action':
@@ -153,6 +170,51 @@ class TableDetail extends Component {
                         </td>
                     )
                     break;
+                case 'parentCategory':
+                    dataElementShow.push(
+                        <td key={key} className='td-center'>
+                            <a onClick={this.showDrawer} style={{ textDecoration: "none" }}>{value.parentCategory.title}</a>
+                            <Forms
+                                field={this.props.editField}
+                                valueProps={value}
+                                getDataForm={(dataEdit) => this.getEdit(dataEdit)}
+                                addShow={this.state.addShow}
+                                onClose={this.onClose}
+                                element={value}
+                            />
+                        </td>
+                    )
+                    break;
+                case 'payloadTitle':
+                    dataElementShow.push(
+                        <td key={key} className='td-center'>
+                            <a onClick={() => this.showDrawerEdit(value._id)} style={{ textDecoration: "none" }}>{value.payload.title}</a>
+                            <Forms
+                                field={this.props.editField}
+                                valueProps={value}
+                                getDataForm={(dataEdit) => this.getEdit(dataEdit)}
+                                addShow={this.state.addShow}
+                                onClose={this.onClose}
+                                element={value}
+                            />
+                        </td>
+                    )
+                    break;
+                case 'key':
+                    dataElementShow.push(
+                        <td key={key} className='td-center'>
+                            <a onClick={() => this.showDrawerEdit(value._id)} style={{ textDecoration: "none" }}>{value.key}</a>
+                            <Forms
+                                field={this.props.editField}
+                                valueProps={value}
+                                getDataForm={(dataEdit) => this.getEdit(dataEdit)}
+                                addShow={this.state.addShow}
+                                onClose={this.onClose}
+                                element={value}
+                            />
+                        </td>
+                    )
+                    break;
 
             }
         }
@@ -165,7 +227,6 @@ class TableDetail extends Component {
     }
 
     render() {
-
         return (
             <tr>
                 {this.showTableElement()}

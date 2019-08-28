@@ -1,0 +1,89 @@
+{
+  "tableTitle": {
+    "stt": "STT",
+    "parentCategory": "Tiêu đề",
+    "action": "Xóa"
+  },
+  "editField": {
+    "type": "edit",
+    "title": "Categories",
+    "submitName": "Gửi",
+    "field": [
+      {
+        "type": "input",
+        "name": "titleParent",
+        "label": "Tiêu đề ",
+        "typeInput": "textParent",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tiêu đề !"
+      },
+      {
+        "type": "input",
+        "name": "typeCategoryParent",
+        "label": "Loại",
+        "typeInput": "radioParent",
+        "disabled": false,
+        "option": [],
+        "messageNull": "Vui lòng chọn loại !"
+      },
+      {
+        "type": "inputArray",
+        "name": "titleChildrens",
+        "label": "Tiêu đề con",
+        "typeInput": "textChildren",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tiêu đề con !"
+      },
+      {
+        "type": "input",
+        "name": "typeCategoryChildren",
+        "label": "Loại",
+        "typeInput": "radioChildren",
+        "disabled": false,
+        "option": [],
+        "messageNull": "Vui lòng chọn loại !"
+      }
+    ]
+  },
+  "addField": {
+    "type": "add",
+    "title": "Thêm categories",
+    "submitName": "Gửi",
+    "field": [
+      {
+        "type": "input",
+        "name": "titleParent",
+        "label": "Tiêu đề ",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tiêu đề !"
+      },
+      {
+        "type": "input",
+        "name": "typeCategoryParent",
+        "label": "Loại",
+        "typeInput": "text",
+        "disabled": false,
+        "option": [],
+        "messageNull": "Vui lòng chọn loại !"
+      },
+      {
+        "type": "inputArray",
+        "name": "titleChildrens",
+        "label": "Tiêu đề con",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tiêu đề con !"
+      },
+      {
+        "type": "input",
+        "name": "typeCategoryChildren",
+        "label": "Loại",
+        "typeInput": "text",
+        "disabled": false,
+        "option": [],
+        "messageNull": "Vui lòng chọn loại !"
+      }
+    ]
+  }
+}

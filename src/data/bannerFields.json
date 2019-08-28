@@ -1,0 +1,45 @@
+{
+  "tableTitle": {
+    "stt": "STT",
+    "payloadTitle": "Tiêu đề",
+    "image": "Ảnh",
+    "action": "Xóa"
+  },
+  "editField": {
+    "type": "edit",
+    "title": "Banner",
+    "submitName": "Gửi",
+    "field": [
+      {
+        "type": "input",
+        "name": "image",
+        "label": "Link ảnh ",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào link ảnh !"
+      },
+      {
+        "type": "input",
+        "name": "action",
+        "label": "Action",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào action !"
+      },
+      {
+        "type": "input",
+        "name": "titleBanner",
+        "label": "Tiêu đề",
+        "typeInput": "textPayload",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào tiêu đề !"
+      }
+    ]
+  },
+  "addField": {
+    "type": "add",
+    "title": "Thêm Banner",
+    "submitName": "Gửi",
+    "field": []
+  }
+}

@@ -6,7 +6,7 @@ import { Layout, Icon, Badge, Avatar, Menu, Dropdown } from 'antd';
 import { actAdd } from '../../action/index';
 import './header.less';
 import NoticeInfo from '../../pages/Header/NoticeInfo';
-import PathHeaders from '../PathHeader/PathHeader';
+import PathHeaders from '../../pages/PathHeader/PathHeader';
 const { Header } = Layout;
 
 class Headers extends Component {
@@ -78,13 +78,7 @@ class Headers extends Component {
         <Menu.Item>
           <a target="_blank" rel="noopener noreferrer" href="https://khoai.tv/">
             <Icon type="user" />
-            <span> Tài khoản</span>
-          </a>
-        </Menu.Item>
-        <Menu.Item>
-          <a target="_blank" rel="noopener noreferrer" href="https://khoai.tv/">
-            <Icon type="setting" />
-            <span> Cài đặt</span>
+            <span> Đăng xuất</span>
           </a>
         </Menu.Item>
       </Menu>
@@ -97,7 +91,7 @@ class Headers extends Component {
           type={collapsed ? 'menu-unfold' : 'menu-fold'}
           onClick={this.toggle}
         />
-        <PathHeaders />
+        <PathHeaders breadcrumb={this.props.breadcrumb} />
         <div className="header-right">
           {/* <Search className="header-search"
           placeholder="input search text"
@@ -117,7 +111,7 @@ class Headers extends Component {
             <div className="header-info-block">
               <Avatar className="header-avatar" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
               <div className="header-info-text">
-                <span>Elizabeth Olsen</span>
+                <span>Phạm Đại Tài</span>
               </div>
             </div>
           </Dropdown>

@@ -9,8 +9,9 @@ import filmFields from '../../data/filmFields';
 const filterField = filmFields.filterField;
 const tableTitle = filmFields.tableTitle;
 const addField = filmFields.addField;
+const editField = filmFields.editField;
 
-class Film extends Component {
+class Films extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -37,8 +38,45 @@ class Film extends Component {
         this.setState({ dataFilter: dataFilter });
     }
 
+    getDataForm = (dataNewFilm) => {
+        console.log("Gia tri form Film:", dataNewFilm);
+        let tempData = this.state.films;
+        tempData.unshift(dataNewFilm);
+        this.setState({
+            films: tempData
+        })
+    }
+
+    getEdit = (dataEdit) => {
+        console.log("Film data edit: ", dataEdit);
+        let tempData = this.state.films;
+        tempData = tempData.map((item) => {
+            if (item._id !== dataEdit._id) {
+                return item;
+            }
+            else {
+                for (let key in dataEdit) {
+                    if (key !== 'links') {
+                        item[key] = dataEdit[key];
+                    }
+                }
+                return item;
+            }
+        });
+        this.setState({
+            films: tempData
+        })
+    }
+
+    getDelete = (idDelete) => {
+        let tempData = this.state.films;
+        tempData = tempData.filter((item) => (item._id !== idDelete));
+        this.setState({
+            films: tempData
+        })
+    }
+
     render() {
-        console.log(addField);
         return (
             <div>
                 <Filter
@@ -47,11 +85,15 @@ class Film extends Component {
                 />
                 <Add
                     addField={addField}
+                    getDataForm={(dataNewFilm) => this.getDataForm(dataNewFilm)}
                 />
                 <Tables
                     titleTableProps={tableTitle}
                     dataTableProps={this.state.films}
                     dataFilter={this.state.dataFilter}
+                    editField={editField}
+                    getEdit={(dataEdit) => this.getEdit(dataEdit)}
+                    getDelete={(idDelete) => this.getDelete(idDelete)}
                 />
             </div>
         );
@@ -59,4 +101,4 @@ class Film extends Component {
 }
 
 
-export default Film;
+export default Films;

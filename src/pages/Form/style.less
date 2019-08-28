@@ -27,11 +27,32 @@
   margin-left: 0px;
 }
 
-.ant-form-item-control {
-  text-align: center;
+.ant-form-item-control:not(.submitForm > div > .ant-form-item-control) {
+  text-align: left;
 }
 
-.data-icon {
-  width: 22px;
-  height: 22px;
+.submitForm > div > .ant-form-item-control {
+  text-align: right;
+}
+
+.ant-tag {
+  cursor: pointer;
+}
+
+.ant-radio-group {
+  width: 100%;
+}
+
+.form-item-dynamic > .ant-col-sm-16 {
+  float: right;
+}
+
+.btn-delete-item {
+  float: right;
+}
+
+.ant-form-item-children > .ant-btn:not(.form-item-dynamic > .ant-col-sm-16) {
+  float: right;
+  padding: 0px 10px;
+  margin: 0px 10px;
 }

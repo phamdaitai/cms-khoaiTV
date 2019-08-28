@@ -22,9 +22,11 @@ class Tables extends Component {
                     value={value} key={key} index={key}
                     deleteElement={() => this.deleteElement(value._id)}
                     titleTableProps={this.props.titleTableProps}
+                    getIdEdit={(idEdit) => this.props.getIdEdit(idEdit)}
                     editField={this.props.editField}
                     getEdit={(dataEdit) => this.props.getEdit(dataEdit)}
                     getDelete={(idDelete) => this.props.getDelete(idDelete)}
+                    getChangeActivated={(idChange) => this.props.getChangeActivated(idChange)}
                 />
             )
         });
@@ -65,30 +67,119 @@ class Tables extends Component {
 
             let checkFilter = true;
             for (let key in dataFilter) {
-                if (typeof item[key] === String || typeof item[key] === 'string') {
+                if (key === 'year') {
+                    let filterKey = dataFilter[key].toString();
+                    filterKey = filterKey.slice(0, 4);
+                    let yearReleased = item['dateReleased'].slice(0, 4);
+                    if (filterKey !== yearReleased) {
+                        checkFilter = false;
+                    }
+                }
+                else if (key === 'arrange') {
+                }
+                else if (typeof item[key] === String || typeof item[key] === 'string') {
                     if (item[key].toLowerCase().indexOf(dataFilter[key]) !== -1) {
                         //checkFilter = true;
                     }
                     else checkFilter = false;
                 }
+                else if (typeof item[key] === Array) {
+                    let tempBoolean = false;
+                    for (let val of item[key]) {
+                        if (val.toLowerCase() === dataFilter[key]) {
+                            tempBoolean = true;
+                        }
+                    }
+                    if (checkFilter === true) {
+                        checkFilter = tempBoolean;
+                    }
+                }
+                else if (typeof item[key] === Object || typeof item[key] === 'object') {
+                    let tempBoolean = false;
+                    let temp = item[key];
+                    for (let key2 in temp) {
+                        if (temp[key2].toLowerCase() === dataFilter[key]) {
+                            tempBoolean = true;
+                        }
+                    }
+                    if (checkFilter === true) {
+                        checkFilter = tempBoolean;
+                    }
+                }
                 else {
-                    if (item[key] === dataFilter[key]) {
-                        //checkFilter = true;
-                    } else checkFilter = false;
+                    if (item[key] !== dataFilter[key]) {
+                        checkFilter = false;
+                    }
                 }
             }
 
-            if (checkFilter) {
+            if (checkFilter === true) {
                 return item;
             }
-            else if (dataFilter.name === undefined) return item; //begin load
+            //else if (dataFilter.name === null) return item; //begin load
         });
+
+        if (dataFilter.arrange) {
+            const tempArrange = ['dateUpdated', 'dateReleased', 'title_vn', 'imdb', 'views', 'ratingNumber'];
+            let tempName = tempArrange[dataFilter.arrange];
+
+            let temp = [];
+            if (tempName === 'imdb' || tempName === 'views' || tempName === 'ratingNumber') {
+                if (dataFilterTemp) {
+                    temp = dataFilterTemp.sort((a, b) => {
+                        return b[tempName] - a[tempName];
+                    });
+                } else {
+                    temp = data.sort((a, b) => {
+                        return b[tempName] - a[tempName];
+                    });
+                }
+            }
+            if (tempName === 'title_vn') {
+                if (dataFilterTemp) {
+                    temp = dataFilterTemp.sort((a, b) => {
+                        return a.title[tempName].charCodeAt() - b.title[tempName].charCodeAt();
+                    });
+                } else {
+                    temp = data.sort((a, b) => {
+                        return a.title[tempName].charCodeAt() - b.title[tempName].charCodeAt();
+                    });
+                }
+            }
+            if (tempName === 'dateUpdated' || tempName === 'dateReleased') {
+                if (dataFilterTemp) {
+                    temp = dataFilterTemp.sort((a, b) => {
+                        let tempYearA = a[tempName].slice(0, 4);
+                        let tempYearB = b[tempName].slice(0, 4);
+                        let tempMonthA = a[tempName].slice(5, 7);
+                        let tempMonthB = b[tempName].slice(5, 7);
+                        let tempDayA = a[tempName].slice(8, 10);
+                        let tempDayB = b[tempName].slice(8, 10);
+                        return 365 * (parseInt(tempYearB) - parseInt(tempYearA))
+                            + 12 * (parseInt(tempMonthB) - parseInt(tempMonthA))
+                            + (parseInt(tempDayB) - parseInt(tempDayA));
+                    });
+                } else {
+                    temp = data.sort((a, b) => {
+                        return b[tempName].slice(0, 4).parseInt() - a[tempName].slice(0, 4).parseInt();
+                    });
+                }
+            }
+
+            dataFilterTemp = temp;
+        }
         return dataFilterTemp;
     }
 
     render() {
         let { dataTableProps } = this.props;
-        let data = this.filter(dataTableProps);
+        let data = [];
+        if (this.props.dataFilter) {
+            data = this.filter(dataTableProps);
+        }
+        else {
+            data = dataTableProps;
+        }
 
         return (
             <div className="content-main">

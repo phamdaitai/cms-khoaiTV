@@ -1,0 +1,98 @@
+{
+  "tableTitle": {
+    "stt": "STT",
+    "key": "Từ khóa",
+    "action": "Xóa"
+  },
+  "editField": {
+    "type": "edit",
+    "title": "Config",
+    "submitName": "Gửi",
+    "field": [
+      {
+        "type": "input",
+        "name": "key",
+        "label": "Từ khóa ",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào từ khóa !"
+      },
+      {
+        "type": "input",
+        "name": "values",
+        "label": "Item",
+        "typeInput": "inputDynamic",
+        "title": {
+          "type": "input",
+          "name": "title",
+          "label": "Tiêu đề",
+          "typeInput": "text",
+          "disabled": false,
+          "messageNull": "Vui lòng nhập vào tiêu đề !"
+        },
+        "content": {
+          "type": "input",
+          "name": "paragraphs",
+          "label": " Tóm tắt",
+          "typeInput": "textArea",
+          "disabled": false,
+          "messageNull": "Vui lòng nhập vào tóm tắt !"
+        }
+      }
+    ]
+  },
+  "addField": {
+    "type": "add",
+    "title": "Thêm config",
+    "submitName": "Gửi",
+    "field": [
+      {
+        "type": "input",
+        "name": "key",
+        "label": "Từ khóa ",
+        "typeInput": "text",
+        "disabled": false,
+        "messageNull": "Vui lòng nhập vào từ khóa !"
+      },
+      {
+        "type": "input",
+        "name": "values",
+        "typeInput": "inputDynamic",
+        "title": {
+          "type": "input",
+          "name": "title",
+          "label": "Tiêu đề",
+          "typeInput": "text",
+          "disabled": false,
+          "messageNull": "Vui lòng nhập vào tiêu đề !"
+        },
+        "content": {
+          "type": "input",
+          "name": "paragraphs",
+          "label": " Tóm tắt",
+          "typeInput": "textArea",
+          "disabled": false,
+          "messageNull": "Vui lòng nhập vào tóm tắt !"
+        }
+      }
+    ]
+  },
+  "itemField": [
+    {
+      "type": "input",
+      "name": "title",
+      "label": "Tiêu đề",
+      "typeInput": "text",
+      "disabled": false,
+      "messageNull": "Vui lòng nhập vào tiêu đề !"
+    },
+    {
+      "type": "input",
+      "name": "paragraphs",
+      "label": " Tóm tắt",
+      "typeInput": "textArea",
+      "disabled": false,
+      "messageNull": "Vui lòng nhập vào tóm tắt !"
+    }
+  ]
+}

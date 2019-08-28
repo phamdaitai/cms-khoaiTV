@@ -12,7 +12,7 @@ const tableTitle = userFields.tableTitle;
 const addField = userFields.addField;
 const editField = userFields.editField;
 
-class User extends Component {
+class Users extends Component {
 
   constructor(props) {
     super(props);
@@ -39,6 +39,10 @@ class User extends Component {
     })
   }
 
+  getIdEdit = (idEdit) => {
+    console.log('idEdit:', idEdit);
+  }
+
   getEdit = (dataEdit) => {
     console.log("User data edit: ", dataEdit);
     let tempData = this.state.userDataState;
@@ -49,6 +53,22 @@ class User extends Component {
       else {
         item.name = dataEdit.name;
         item.password = dataEdit.password;
+        return item;
+      }
+    });
+    this.setState({
+      userDataState: tempData
+    })
+  }
+
+  getChangeActivated = (idChange) => {
+    let tempData = this.state.userDataState;
+    tempData = tempData.map((item) => {
+      if (item._id !== idChange) {
+        return item;
+      }
+      else {
+        item.activated = !item.activated;
         return item;
       }
     });
@@ -81,12 +101,14 @@ class User extends Component {
           dataTableProps={this.state.userDataState}
           dataFilter={this.state.dataFilter}
           editField={editField}
+          getIdEdit={(idEdit) => this.getIdEdit(idEdit)}
           getEdit={(dataEdit) => this.getEdit(dataEdit)}
           getDelete={(idDelete) => this.getDelete(idDelete)}
+          getChangeActivated={(idChange) => this.getChangeActivated(idChange)}
         />
       </div>
     );
   }
 }
 
-export default User;
+export default Users;
